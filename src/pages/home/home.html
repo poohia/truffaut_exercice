@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-navbar color="theme1">
+
+    <ion-title >
+    <img width="72"  src="img/logo_orange-e1462173700289.png" />
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Bornes</h1>
+  <ion-list>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="img/borne.png">
+    </ion-thumbnail>
+    <h2>Borne A</h2>
+    <p>Status : <span color="valid">{{ statusBorne }}</span></p>
+    <button ion-button (click)='searchSession()' >Recherche session</button>
+  </ion-item>
+</ion-list>
+</ion-content>

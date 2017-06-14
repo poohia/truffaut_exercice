@@ -1,0 +1,40 @@
+<ion-header align-title="left">
+  <ion-navbar color="theme1">
+
+    <ion-title>
+    <img width="72"  src="img/logo_orange-e1462173700289.png" />
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div  *ngFor="let plante of plantes">
+  <ion-card>
+  <img src="{{plante.src}}"/>
+  <ion-card-content>
+    <ion-card-title id="name">
+      {{plante.name}}
+      </ion-card-title>
+
+      <p id="allee"><u><label>Allée : </label> {{ plante.allee }}</u></p>
+      <p  align="right" id="price">{{ plante.price }}</p>
+
+      <button col-6 ion-button color="white" class="btn-card" clear (click)="showModal()"> Trouver &nbsp;&nbsp;</button>
+      <button col-6 ion-button color="white" class="btn-card" clear> Ajouter à la liste &nbsp;&nbsp;</button>
+  </ion-card-content>
+</ion-card>
+</div>
+<!--  <ion-list *ngFor="let plante of plantes">
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="{{plante.src}}">
+      </ion-thumbnail>
+      <h2>{{plante.name}}</h2>
+      <p><label>Prix : </label> {{ plante.price }}</p>
+      <p><u><label>Allée : </label> {{ plante.allee }}</u></p>
+      <button ion-button item-right clear><b>
+ Trouver &nbsp;&nbsp;&nbsp;<ion-icon name="compass"></ion-icon></b></button>
+
+    </ion-item>
+  </ion-list> -->
+</ion-content>
